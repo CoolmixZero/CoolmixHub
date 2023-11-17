@@ -53,14 +53,16 @@ const Navigation = () => {
       </Link>
       {NAVIGATION_ITEMS.map((item) => (
         <Link
-          className="text-2xl flex items-center justify-start w-fit space-x-6 hover:bg-white/10 transition duration-200 rounded-full p-3"
+          className="group w-full"
           href={item.href}
           key={item.name}
         >
-          <div>
-            <item.icon />
+          <div className="text-2xl flex items-center justify-start w-fit space-x-6 group-hover:bg-white/10 transition duration-200 rounded-full p-3">
+            <div>
+              <item.icon />
+            </div>
+            <p>{item.name}</p>
           </div>
-          <p>{item.name}</p>
         </Link>
       ))}
     </nav>
